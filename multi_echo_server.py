@@ -32,6 +32,7 @@ def handle_echo(addr, conn):
 
     time.sleep(0.5)
     conn.sendall(full_data)
+    conn.shutdown(socket.SHUT_RDWR)
     conn.close()
 
 if __name__ == "__main__":
