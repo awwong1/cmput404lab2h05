@@ -18,10 +18,10 @@ def main():
             full_data = b""
             while True:
                 data = conn.recv(BUFFER_SIZE)
-                print(data)
+                # print(data)
                 if not data: break
                 full_data += data
-                conn.send(data)
+                # conn.send(data)
 
             time.sleep(0.5)
             conn.sendall(full_data)
